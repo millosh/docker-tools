@@ -140,3 +140,10 @@ Full init:
 Full update:
 
     ./bootstrap-docker.py --distro debian --release jessie --docker-repository my_docker_repo/debian-jessie --bootstrap-release jessie --full-update
+
+### Issues
+
+Inside of system/all/etc/ you will find the file resolv.conf. If your
+network settings do not allow using Google DNS servers, you should either
+remove the file and implicitly use resolv.conf from your host machine or
+define explicitly which DNS servers you want to use.
