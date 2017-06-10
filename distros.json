@@ -1,0 +1,20 @@
+{
+	"debian": {
+		"jessie": {
+			"repository": "your_repo/debian-jessie",
+			"distro version": "jessie"
+		},
+		"testing": {
+			"repository": "your_repo/debian-testing",
+			"distro version": "testing"
+		},
+		"unstable": {
+			"repository": "your_repo/debian-",
+			"distro version": "unstable"
+		},
+		"experimental": {
+			"repository": "your_repo/debian-",
+			"distro version": "experimental"
+		}
+	}
+}
