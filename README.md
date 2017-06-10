@@ -126,3 +126,14 @@ images layers as it's possible.
 I suggest the following approach:
 * Initialize the container and push it into the repository (--full-init).
 * Update chroot periodically and push into the repository (--full-update).
+
+### Examples
+
+Dry run:
+    ./bootstrap-docker.py --noexec --distro debian --release jessie --docker-repository millosh/debian-jessie --bootstrap-release jessie --full-init
+
+Full init:
+    ./bootstrap-docker.py --distro debian --release jessie --docker-repository my_docker_repo/debian-jessie --bootstrap-release jessie --full-init
+
+Full update:
+    ./bootstrap-docker.py --distro debian --release jessie --docker-repository my_docker_repo/debian-jessie --bootstrap-release jessie --full-update
