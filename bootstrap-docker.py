@@ -70,11 +70,9 @@ def update_software():
     exec_cmd(cmd,tp,te)
 
 def install_software():
-    software = [ 
-        'vim-nox', 'tcpdump', 'nmap', 'net-tools', 
-    ]
-    cmd = "chroot " + odir + " apt-get install -y " + " ".join(software)
-    exec_cmd(cmd,tp,te)
+    if new_software != []:
+        cmd = "chroot " + odir + " apt-get install -y " + " ".join(new_software)
+        exec_cmd(cmd,tp,te)
 
 def create_docker_image():
     # create docker image
@@ -124,6 +122,13 @@ else:
     distros = json.loads(open(distros_config).read())
 distros[distro][release]['docker repository'] = gm_argument("--docker-repository","string",distros[distro][release]['docker repository'],"Docker repository")
 distros[distro][release]['bootstrap release'] = gm_argument("--bootstrap-release","string",distros[distro][release]['bootstrap release'],"Bootstrap release")
+new_software_config = gm_argument("--software-config","json file",1,"Software config")
+if new_software_config == 1:
+    new_software = []
+else:
+    new_software = json.loads(open(new_software_config).read())
+additional_software = gm_argument("--packages","string",[],"Additional software").split(",")
+new_software += additional_software
 
 if "--full-init" in sys.argv:
     system_install()

@@ -98,6 +98,10 @@ let me know: millosh@gmail.com.
     --noprint: Optional.  Do not print the commands.  Default is to print
       the commands.
 
+    --packages: Optional.  Comma-sepparated list of the additional software
+      you want to install in addition or not to the defined list of software
+      inside of the JSON file (see: --software-config).
+
     --root: Optional. Root dir, where you can find "system" directory and where
       "chroots" directory will be created.  If not defined, will be current
       directory.
@@ -105,6 +109,10 @@ let me know: millosh@gmail.com.
     --release: Mandatory. Distribution release, like "jessie", "testing". It
       will be sent to debootstrap, so everything what debootstrap support,
       this program supports, as well (Ubuntu, Mint etc.  releases).
+
+    --software-config: Optional.  The list of the software you want to be
+      added after the initial installation.  JSON file; "software.json" is
+      an example for the structure (simple array).
 
     --tag: Optional.  Will tag docker image and docker container.  If not
       defined, it will be "default".

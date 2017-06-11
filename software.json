@@ -1,0 +1,6 @@
+[
+	"net-tools",
+	"nmap", 
+	"tcpdump", 
+	"vim-nox"
+]
