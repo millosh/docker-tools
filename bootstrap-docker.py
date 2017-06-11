@@ -122,12 +122,17 @@ else:
     distros = json.loads(open(distros_config).read())
 distros[distro][release]['docker repository'] = gm_argument("--docker-repository","string",distros[distro][release]['docker repository'],"Docker repository")
 distros[distro][release]['bootstrap release'] = gm_argument("--bootstrap-release","string",distros[distro][release]['bootstrap release'],"Bootstrap release")
+
 new_software_config = gm_argument("--software-config","json file",1,"Software config")
 if new_software_config == 1:
     new_software = []
 else:
     new_software = json.loads(open(new_software_config).read())
-additional_software = gm_argument("--packages","string",[],"Additional software").split(",")
+additional_software = gm_argument("--packages","comma-separated","0","Additional software").split(",") 
+try:
+    new_software.remove("0")
+except ValueError:
+    pass
 new_software += additional_software
 
 if "--full-init" in sys.argv:
