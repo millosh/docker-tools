@@ -1,6 +1,10 @@
 [
 	"net-tools",
-	"nmap", 
-	"tcpdump", 
+	"nmap",
+	"psmisc",
+	"rsync",
+	"tcpdump",
+	"telnet",
 	"vim-nox"
 ]
+
