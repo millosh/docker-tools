@@ -1,7 +1,7 @@
 # docker-tools
 My Docker tools
 
-For now just one tool, names "bootstrap-docker.py".
+For now just one tool, named "bootstrap-docker.py".
 
 ## Requirements
 
