@@ -57,7 +57,7 @@ def config_update():
     exec_cmd(cmd,tp,te)
     cmd = "chroot " + odir + " apt-get install -y locales"
     exec_cmd(cmd,tp,te)
-    cmd = "echo 'en_us.utf-8 utf-8' > " + odir + "/etc/locale.gen"
+    cmd = "echo 'en_US.utf-8 utf-8' > " + odir + "/etc/locale.gen"
     exec_cmd(cmd,tp,te)
     cmd = "chroot " + odir + " locale-gen"
     exec_cmd(cmd,tp,te)
