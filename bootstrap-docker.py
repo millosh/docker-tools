@@ -81,7 +81,7 @@ def create_docker_image():
 
 def push_to_cloud():
     # tag it
-    cmd = "docker full_tag " + fullname + " " + distros[distro][release]['docker repository'] + ":" + full_tag
+    cmd = "docker tag " + fullname + " " + distros[distro][release]['docker repository'] + ":" + full_tag
     exec_cmd(cmd,tp,te)
     # push to the cloud.docker
     cmd = "docker push " + distros[distro][release]['docker repository'] + ":" + full_tag
