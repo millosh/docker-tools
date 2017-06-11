@@ -78,7 +78,7 @@ def install_software():
 
 def create_docker_image():
     # create docker image
-    cmd = "tar -c " + odir + " -c . | docker import - " + fullname
+    cmd = "tar -C " + odir + " -c . | docker import - " + fullname
     exec_cmd(cmd,tp,te)
 
 def push_to_cloud():
@@ -101,7 +101,7 @@ release = gm_argument("--release","string",False,"Release")
 tag = gm_argument("--tag","string","default","Tag")
 tag_suffix = time.strftime("%Y%m%d%H%M%S")
 full_tag = tag + "-" + tag_suffix
-simple_name = distro + '-' + release
+simple_name = distro + '-' + release + '-' + tag
 name = simple_name + '-' + full_tag
 fullname = distro + '-' + release + ':' + full_tag
 root_dir = gm_argument("--root","dir",".","Root directory")
