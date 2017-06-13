@@ -68,6 +68,8 @@ def update_software():
     exec_cmd(cmd,tp,te)
     cmd = "chroot " + odir + " apt-get upgrade -y"
     exec_cmd(cmd,tp,te)
+    cmd = "chroot " + odir + " apt-get clean"
+    exec_cmd(cmd,tp,te)
 
 def install_software():
     if new_software != []:
