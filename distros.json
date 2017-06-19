@@ -4,6 +4,14 @@
 			"repository": "your_repo/debian-jessie",
 			"distro version": "jessie"
 		},
+		"stretch": {
+			"repository": "your_repo/debian-stretch",
+			"distro version": "stretch"
+		},
+		"buster": {
+			"repository": "your_repo/debian-buster",
+			"distro version": "buster"
+		},
 		"testing": {
 			"repository": "your_repo/debian-testing",
 			"distro version": "testing"
