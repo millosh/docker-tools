@@ -68,13 +68,17 @@ def update_software():
     exec_cmd(cmd,tp,te)
     cmd = "chroot " + odir + " apt-get upgrade -y"
     exec_cmd(cmd,tp,te)
-    cmd = "chroot " + odir + " apt-get clean"
+    cmd = "chroot " + odir + " apt-get clean -y"
     exec_cmd(cmd,tp,te)
 
 def install_software():
     if new_software != []:
-        cmd = "chroot " + odir + " apt-get install -y " + " ".join(new_software)
+    	cmd = "chroot " + odir + " apt-get update"
+    	exec_cmd(cmd,tp,te)
+        cmd = "chroot " + odir + " apt-get install -y " + " ".join(new_software[:-1])
         exec_cmd(cmd,tp,te)
+    	cmd = "chroot " + odir + " apt-get clean -y"
+    	exec_cmd(cmd,tp,te)
 
 def create_docker_image():
     # create docker image
@@ -154,9 +158,11 @@ elif "--init" in sys.argv:
     run_docker()
 elif "--full-update" in sys.argv:
     update_software()
+    install_software()
     create_docker_image()
     push_to_cloud()
 elif "--update" in sys.argv:
     update_software()
+    install_software()
     create_docker_image()
 
