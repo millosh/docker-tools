@@ -4,12 +4,8 @@
 			"repository": "your_repo/debian-jessie",
 			"distro version": "jessie"
 		},
-		"stretch": {
-			"repository": "your_repo/debian-stretch",
-			"distro version": "stretch"
-		},
 		"buster": {
-			"repository": "your_repo/debian-buster",
+			"repository": "your_repo/debian-testing",
 			"distro version": "buster"
 		},
 		"testing": {
@@ -23,6 +19,14 @@
 		"experimental": {
 			"repository": "your_repo/debian-",
 			"distro version": "experimental"
+		},
+		"magento": {
+			"repository": "your_repo/debian-jessie",
+			"distro version": "jessie"
+		},
+		"embark": {
+			"repository": "your_repo/debian-testing",
+			"distro version": "buster"
 		}
 	}
 }
