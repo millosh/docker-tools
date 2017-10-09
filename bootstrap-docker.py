@@ -68,6 +68,8 @@ def update_software():
     exec_cmd(cmd,tp,te)
     cmd = "chroot " + odir + " apt-get upgrade -y"
     exec_cmd(cmd,tp,te)
+    cmd = "chroot " + odir + " apt-get autoremove -y"
+    exec_cmd(cmd,tp,te)
     cmd = "chroot " + odir + " apt-get clean -y"
     exec_cmd(cmd,tp,te)
 
