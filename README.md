@@ -58,7 +58,7 @@ let me know: millosh@gmail.com.
       otherwise conditionally optional: one of the following commands should
       be invoked: --full-init, --init, --full-update, --update.
 
-      This options is doing the following: system_install (debootstrap
+      This option is doing the following: system_install (debootstrap
       installation in chroot), config_update (minimal config update,
       including copying the files from system/<distribution>/<release>/
       path), update_software (apt-get update, aptget-upgrade -y),
@@ -74,7 +74,7 @@ let me know: millosh@gmail.com.
       commands should be invoked: --full-init, --init, --full-update,
       --update.
 
-      This options is doing the following: update_software (apt-get update,
+      This option is doing the following: update_software (apt-get update,
       aptget-upgrade -y), create_docker_image (imports the content of
       particular chroot directory into docker image), push_to_cloud (pushing
       docker to docker repository).
@@ -83,7 +83,7 @@ let me know: millosh@gmail.com.
       otherwise conditionally optional: one of the following commands should
       be invoked: --full-init, --init, --full-update, --update.
 
-      This options is doing the following: system_install (debootstrap
+      This option is doing the following: system_install (debootstrap
       installation in chroot), config_update (minimal config update,
       including copying the files from system/<distribution>/<release>/
       path), update_software (apt-get update, aptget-upgrade -y),
@@ -121,7 +121,7 @@ let me know: millosh@gmail.com.
       otherwise conditionally optional: one of the following commands should
       be invoked: --full-init, --init, --full-update, --update.
 
-      This options is doing the following: update_software (apt-get update,
+      This option is doing the following: update_software (apt-get update,
       aptget-upgrade -y), create_docker_image (imports the content of
       particular chroot directory into docker image).
 
