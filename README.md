@@ -111,8 +111,9 @@ let me know: millosh@gmail.com.
       this program supports, as well (Ubuntu, Mint etc.  releases).
 
     --software-config: Optional.  The list of the software you want to be
-      added after the initial installation.  JSON file; "software.json" is
-      an example for the structure (simple array).
+      added after the initial installation.  JSON file;
+      "software/software.json" is an example for the structure (simple
+      array).
 
     --tag: Optional.  Will tag docker image and docker container.  If not
       defined, it will be "default".
