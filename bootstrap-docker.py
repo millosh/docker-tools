@@ -79,6 +79,8 @@ def install_software():
     	exec_cmd(cmd,tp,te)
         cmd = "chroot " + odir + " apt-get install -y " + " ".join(new_software[:-1])
         exec_cmd(cmd,tp,te)
+    	cmd = "chroot " + odir + " apt-get autoremove -y"
+        exec_cmd(cmd,tp,te)
     	cmd = "chroot " + odir + " apt-get clean -y"
     	exec_cmd(cmd,tp,te)
 
